@@ -102,7 +102,7 @@ public class SampleMecanumDrive extends MecanumDrive {
         leftFront = hardwareMap.get(DcMotorEx.class, "frontleft");
         leftRear = hardwareMap.get(DcMotorEx.class, "backleft");
         rightRear = hardwareMap.get(DcMotorEx.class, "backright");
-        rightFront = hardwareMap.get(DcMotorEx.class, "frontfrihgt");
+        rightFront = hardwareMap.get(DcMotorEx.class, "frontright");
 
         motors = Arrays.asList(leftFront, leftRear, rightRear, rightFront);
 
@@ -128,7 +128,7 @@ public class SampleMecanumDrive extends MecanumDrive {
 
         // TODO: if desired, use setLocalizer() to change the localization method
         // for instance, setLocalizer(new ThreeTrackingWheelLocalizer(...));
-
+        setLocalizer(new StandardTrackingWheelLocalizer(hardwareMap));
         trajectorySequenceRunner = new TrajectorySequenceRunner(follower, HEADING_PID);
     }
 
