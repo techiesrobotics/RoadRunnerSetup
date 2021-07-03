@@ -15,11 +15,8 @@ import com.qualcomm.robotcore.hardware.PIDFCoefficients;
  * and op modes themselves.
  */
 
-// Andrew's Test
 @Config
-public class DriveConstants {// test
-
-    // kl test
+public class DriveConstants {
     /*
      * These are motor constants that should be listed online for your motors.
      */
